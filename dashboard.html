@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Toilet IC - Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="main-bg-colour">
+        
+        <!-- Navigation bar -->
+        <div class="navbar navbar-inverse navbar-static-top">
+            
+            <div class="container">
+                <a href="#" class="navbar-brand header-margin-top">
+                    <img src="images/toiletICLogoHorizental.png" alt="" height="64" width="163">
+                </a>
+                
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!--<a class="navbar-btn btn-primary btn pull-right">LOG IN</a>-->
+                
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right" id="navbarList">
+                        <li class="active"><a href="#">Dashboard</a></li>
+                        <li class="dropdown">
+                            
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Site <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="siteAManage.html">A Mall</a></li>
+                            </ul>
+                            
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Main Content -->
+        <div class="container">
+            
+            <h2>Management Dashboard</h2>
+            <br>
+            
+        <div class="row">
+            
+            <div class="col-md-9">
+                <h4>Toilets in a nutshell</h4>
+                <br>
+                <div class="tabbable">
+                    
+                    <ul class="nav nav-pills nav-stacked col-md-3">
+                    <li><a href="#a" data-toggle="tab">Problematic Toilets</a></li>
+                    <li class="active"><a href="#b" data-toggle="tab">Popularity of Toilets</a></li>
+                    <li><a href="#c" data-toggle="tab">Visitation Rate</a></li>
+                    </ul>
+                    
+                    <div class="tab-content col-md-7">
+                        
+                    <div class="tab-pane active" id="a">
+                        <div id="containerStackLog" style="min-width: 500px; height: 300px; margin: 0 auto"></div>
+                    </div>
+                        
+                    <div class="tab-pane" id="b">
+                        <div id="containerStackBar" style="min-width: 500px; height: 300px; margin: 0 auto"></div>
+                    </div>
+                        
+                    <div class="tab-pane" id="c">
+                        <div id="containerLine" style="min-width: 500px; height: 300px; margin: 0 auto"></div>
+                    </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <h4>Summary</h4>
+                <br>
+                <div class="panel-group" id="accordion">
+                <!-- First Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                         <h4 class="panel-title"
+                             data-toggle="collapse" 
+                             data-target="#collapseOne">
+                             Toilet Status
+                         </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>Most popular toilet : <b>L1 Male East</b></p>
+                            
+                            <p>Toilet most frequently visited during lunch time.</p>
+                            
+                            <br>
+                            <p>Most problematic toilet : <b>L1 Male West</b></p>
+                            
+                            <p class="red-text">May consider assigning more cleaners to toilet - L1 Male West.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+        
+        <!-- Footer Bar -->
+        <div class="navbar navbar-default navbar-fixed-bottom footer">
+            <div class="container">
+                <p class="navbar-text pull-left text-center">Site v0.1 designed and built by Team 6 (The toilet ICs)</p>
+                <a class="navbar-btn btn-warning btn pull-right">Check out Team 7!</a>
+                <a class="navbar-btn btn-warning btn pull-right btn-margin-right">Check out Team 5!</a>
+            </div>
+        </div>
+        
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/dashboard.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        
+    </body>
+</html>

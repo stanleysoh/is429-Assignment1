@@ -8,3 +8,270 @@ and open the template in the editor.
     Author     : Stanley
 */
 
+* {
+  border-radius: 0 !important;
+}
+
+.btn-margin-left {
+    margin-left: 2px;
+}
+.btn-margin-right {
+    margin-right: 2px;
+}
+
+.main-bg-colour {
+    background-color: #eee;
+}
+
+.header-margin-top {
+    margin-top: -20px;
+}
+
+.header-margin-top-down {
+    margin-top: 10px;
+}
+
+.red-text {
+    color: #ff0000;
+}
+
+.toilet-supply-red {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.toilet-supply-green {
+    color: #77dd77;
+    font-weight: bold;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 100px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+/* navbar */
+.navbar-inverse {
+    border-style: none;
+    background-color: #836953;
+    border-color: #E7E7E7;
+}
+
+.h-text {
+    font-size: 40px;
+    font-weight: 100;
+    color: #654321;
+}
+
+.m-text {
+    font-weight: 100;
+    color: #654321;
+}
+
+.input-large {
+  width: 210px;
+  height: 44px !important;
+  margin-bottom: 10px !important;
+  line-height: 30px !important;
+  padding: 11px 19px !important;
+  font-size: 17.5px !important;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.input-large[class=input-large] {
+    width: 400px;
+}
+
+/* link */
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFF2CC;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #FFE699;
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #FFE699;
+    background-color: #410;
+}
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #FFE699;
+    background-color: #410;
+}
+
+/* header bar - no background */
+.jumbotron2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #eee;
+}
+.jumbotron2 h1,
+.jumbotron2 .h1 {
+  color: inherit;
+  font-size: 44px;
+}
+.jumbotron2 p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 100;
+  
+}
+.jumbotron2 > hr {
+  border-top-color: #d5d5d5;
+}
+.container .jumbotron2,
+.container-fluid .jumbotron2 {
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 6px;
+}
+.jumbotron2 .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron2 {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .jumbotron2,
+  .container-fluid .jumbotron2 {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .jumbotron2 h1,
+  .jumbotron2 .h1 {
+    font-size: 44px;
+    font-family: Tahoma, Geneva, sans-serif;
+  }
+}
+
+/* custom inclusion of right, left and below tabs */
+
+.tabs-below > .nav-tabs,
+.tabs-right > .nav-tabs,
+.tabs-left > .nav-tabs {
+  border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  display: block;
+}
+
+.tabs-below > .nav-tabs {
+  border-top: 1px solid #ddd;
+}
+
+.tabs-below > .nav-tabs > li {
+  margin-top: -1px;
+  margin-bottom: 0;
+}
+
+.tabs-below > .nav-tabs > li > a {
+  -webkit-border-radius: 0 0 4px 4px;
+     -moz-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+  border-top-color: #ddd;
+  border-bottom-color: transparent;
+}
+
+.tabs-below > .nav-tabs > .active > a,
+.tabs-below > .nav-tabs > .active > a:hover,
+.tabs-below > .nav-tabs > .active > a:focus {
+  border-color: transparent #ddd #ddd #ddd;
+}
+
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+
+.tabs-left > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  min-width: 74px;
+  margin-right: 0;
+  margin-bottom: 3px;
+}
+
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-right: 1px solid #ddd;
+}
+
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+     -moz-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+}
+
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: #ffffff;
+}
+
+.tabs-right > .nav-tabs {
+  float: right;
+  margin-left: 19px;
+  border-left: 1px solid #ddd;
+}
+
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  -webkit-border-radius: 0 4px 4px 0;
+     -moz-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+}
+
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: #ffffff;
+}
+
+

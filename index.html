@@ -1,19 +1,97 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Toilet IC</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    
-	<div class="navbar navbar-inverse navbar-static-top">
-
-    
-	<script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-	
-  </body>
+<html>
+    <head>
+        <title>Toilet IC</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="main-bg-colour">
+        
+        <div class="navbar navbar-inverse navbar-static-top">
+            
+            <div class="container">
+                <a href="#" class="navbar-brand header-margin-top">
+                    <img src="images/toiletICLogoHorizental.png" alt="" height="64" width="163">
+                </a>
+                
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-btn btn-primary btn pull-right">LOG IN</a>
+                
+                <!--<div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="dropdown">
+                            
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Site <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Location A</a></li>
+                                <li><a href="#">Location B</a></li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                </div>-->
+            </div>
+            
+        </div>
+        
+        <div class="container">
+            <div class="jumbotron2 text-center">
+                <div class="h-text">Interaction with your toilet, made easier.</div>
+            </div>
+        </div>
+        
+        <div class="container">
+        <div class="row">
+            
+            <div class="col-md-2">
+            </div>
+            
+            <div class="col-md-4 header-margin-top-down">
+                <img src="images/wifi-toiletIC.png" alt="" height="239" width="335">
+            </div>
+            
+            <div class="col-md-1">
+            </div>
+            
+            <div class="col-md-3 text-center">
+                <form class="frmLogin" role="form">
+                <h4 class="m-text">LOG IN NOW TO MANAGE YOUR TOILET.</h4>
+                <br>
+                <input type="email" name="email" class="form-control input-lg" id="login-email" placeholder="Email">
+                <br>
+                <input type="password" name="password" class="form-control input-lg" id="login-password" placeholder="Password">
+                <br>
+                <div id="statusMsg"></div>
+                <button class="btn btn-primary form-control" type="button" id="loginBtn">LOGIN</button>
+                </form>
+            </div>
+            
+        </div>
+        </div>
+        
+        <div class="navbar navbar-default navbar-fixed-bottom footer">
+            <div class="container">
+                <p class="navbar-text pull-left text-center">Site v0.1 designed and built by Team 6 (The toilet ICs)</p>
+                <a class="navbar-btn btn-warning btn pull-right">Check out Team 7!</a>
+                <a class="navbar-btn btn-warning btn pull-right btn-margin-right">Check out Team 5!</a>
+            </div>
+        </div>
+        
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/login.js"></script>
+        
+        
+    </body>
 </html>

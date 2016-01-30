@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myApp">
+    <head>
+        <title>Manage A Mall</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="main-bg-colour" ng-controller="assignmentController">
+        
+        <!-- Navigation bar -->
+        <div class="navbar navbar-inverse navbar-static-top">
+            
+            <div class="container">
+                <a href="#" class="navbar-brand header-margin-top">
+                    <img src="images/toiletICLogoHorizental.png" alt="" height="64" width="163">
+                </a>
+                
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <!--<a class="navbar-btn btn-primary btn pull-right">LOG IN</a>-->
+                
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right" id="navbarList">
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="dropdown active">
+                            
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Site <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">A Mall</a></li>
+                            </ul>
+                            
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Main Content -->
+        <div class="container">
+            
+            <div class="m-text">
+            <h2>What's going on in A Mall</h2>
+            </div>
+            <br>
+            
+            <div class="row">
+                
+                <div class="col-md-9 m-text">
+                    <h4>Cleaners assignment Log</h4>
+                    <br>
+                    
+                    <!--  Data Table -->
+                    <table class="table table-hover">
+                        
+                        <tr class="warning m-text" ng-repeat="assignment in assignments | reverse">
+                            <td>{{ assignment.cleaner }} <br> {{ assignment.contactNo }} <br><br> {{ assignment.toiletAssigned }}</td>
+                            <td style="padding-left: 50px;"><br>{{ assignment.purpose }}</td>
+                            <td style="padding-left: 88px; text-align:right;">{{ assignment.reportedTime }}<br><br>In Progress</td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+                
+                <div class="col-md-3 m-text">
+                    <h4>Toilets Supplies Status</h4>
+                    <br>
+                    
+                    <div class="panel-group" id="accordion">
+                    <!-- First Panel -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"
+                                 data-toggle="collapse" 
+                                 data-target="#collapseOne">
+                                 L1 Male East
+                             </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Dispenser Soap : <b class="toilet-supply-red">Low</b></p>
+                                
+                                <br>
+                                
+                                <p>Toilet Papers &nbsp;&nbsp;&nbsp;&nbsp;: <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Panel -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"
+                                 data-toggle="collapse" 
+                                 data-target="#collapseTwo">
+                                 L1 Male West
+                             </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Dispenser Soap : <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                                <p>Toilet Papers &nbsp;&nbsp;&nbsp;&nbsp;: <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third Panel -->
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"
+                                 data-toggle="collapse" 
+                                 data-target="#collapseThree">
+                                 L1 Female East
+                             </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Dispenser Soap : <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                                <p>Toilet Papers &nbsp;&nbsp;&nbsp;&nbsp;: <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fourth Panel -->
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                             <h4 class="panel-title"
+                                 data-toggle="collapse" 
+                                 data-target="#collapseFour">
+                                 L1 Female West
+                             </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Dispenser Soap : <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                                <p>Toilet Papers &nbsp;&nbsp;&nbsp;&nbsp;: <b class="toilet-supply-green">Normal</b></p>
+                                
+                                <br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                    <br><br>
+                    
+                    <a href="#assignment" class="btn btn-danger pull-right" data-toggle="modal">Assign Cleaner</a>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Footer Bar -->
+        <div class="navbar navbar-default navbar-fixed-bottom footer">
+            <div class="container">
+                <p class="navbar-text pull-left text-center">Site v0.1 designed and built by Team 6 (The toilet ICs)</p>
+                <a class="navbar-btn btn-warning btn pull-right">Check out Team 7!</a>
+                <a class="navbar-btn btn-warning btn pull-right btn-margin-right">Check out Team 5!</a>
+            </div>
+        </div>
+        
+        
+        <!-- Model (Dialog Box) -->
+        
+        <div class="modal fade" id="assignment" role="dialog">
+            
+            <div class="modal-dialog">
+                
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                    
+                    <h4>Assign a Cleaner</h4>
+                    
+                </div>
+                    
+                    <div class="modal-body">
+                    
+                    <input type="text" name="name" class="form-control input-lg" id="assign-name" placeholder="Cleaner's Name">
+                    <br>
+                    <input type="text" name="contact" class="form-control input-lg" id="assign-contact" placeholder="Contact No">
+                    <br>
+                    <input type="text" name="toilet" class="form-control input-lg" id="assign-toilet" placeholder="Assign Toilet">
+                    <br>
+                    <textarea rows="4" cols="50" name="purpose" class="form-control input-lg" id="assign-purpose" placeholder="Purpose"></textarea>
+                    
+                </div>
+                    
+                    <div class="modal-footer">
+                    
+                        <button class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" type="button" id="assign" data-dismiss="modal">Submit</button>
+                    
+                </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/assignmentlog.js"></script>
+        <script src="js/cleanerassignment.js"></script>
+        
+    </body>
+</html>
