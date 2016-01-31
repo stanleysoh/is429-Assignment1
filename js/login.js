@@ -25,12 +25,14 @@ $(function () {
                   localStorage.setItem("loginUser",email);
                   
                   if (email !== "manager@toiletic.com") {
-                      //window.location.href = "cleaner.html";
-					  console.log("cleaner");
+                      console.log("cleaner");
+					  window.location.href = "cleaner.html";
+					  
                   } else {
                   
-                  //window.location.href = "dashboard.html";
 				  console.log("manager");
+                  window.location.href = "dashboard.html";
+				  
                     }
                   
                   console.log("Authenticated successfully with payload:", authData);
