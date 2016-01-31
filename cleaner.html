@@ -4,15 +4,15 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html ng-app="myApp">
     <head>
-        <title>Toilet IC - Dashboard</title>
+        <title>Welcome Cleaner</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body class="main-bg-colour m-text">
+    <body class="main-bg-colour m-text" ng-controller="cleanerController">
         
         <!-- Navigation bar -->
         <div class="navbar navbar-inverse navbar-static-top">
@@ -32,12 +32,14 @@ and open the template in the editor.
                 
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right" id="navbarList">
-                        <li class="active"><a href="#">Dashboard</a></li>
                         <li class="dropdown">
                             
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Site <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="siteAManage.html">A Mall</a></li>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Chinese (中文)</a></li>
+                                <li><a href="#">Malay</a></li>
+                                <li><a href="#">Tamil</a></li>
                             </ul>
                             
                         </li>
@@ -50,44 +52,13 @@ and open the template in the editor.
         
         <!-- Main Content -->
         <div class="container">
-            
-            <h2>Management Dashboard</h2>
+            <h2>Duty at a glance</h2>
             <br>
             
         <div class="row">
-            
-            <div class="col-md-9">
-                <h4>Toilets in a nutshell</h4>
-                <br>
-                <div class="tabbable">
-                    
-                    <ul class="nav nav-pills nav-stacked col-md-3">
-                    <li><a href="#a" data-toggle="tab">Problematic Toilets</a></li>
-                    <li class="active"><a href="#b" data-toggle="tab">Popularity of Toilets</a></li>
-                    <li><a href="#c" data-toggle="tab">Visitation Rate</a></li>
-                    </ul>
-                    
-                    <div class="tab-content col-md-7">
-                        
-                    <div class="tab-pane active" id="a">
-                        <div id="containerStackLog" style="min-width: 500px; height: 300px; margin: 0 auto"></div>
-                    </div>
-                        
-                    <div class="tab-pane" id="b">
-                        <div id="containerStackBar" style="min-width: 500px; height: 300px; margin: 0 auto"></div>
-                    </div>
-                        
-                    <div class="tab-pane" id="c">
-                        <div id="containerLine" style="min-width: 500px; height: 300px; margin: 0 auto"></div>
-                    </div>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="col-md-3">
-                <h4>Summary</h4>
+        <div class="col-md-4"></div>
+        
+        <div class="col-md-4">
                 <br>
                 <div class="panel-group" id="accordion">
                 <!-- First Panel -->
@@ -96,26 +67,39 @@ and open the template in the editor.
                          <h4 class="panel-title"
                              data-toggle="collapse" 
                              data-target="#collapseOne">
-                             Toilet Status
+                             Cleaning Alert
                          </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p>Most popular toilet : <b>L1 Male East</b></p>
+                        <div class="panel-body" ng-repeat="assignment in assignments">
                             
-                            <p>Toilet most frequently visited during lunch time.</p>
+                            <p>Reported Time : <b>{{ assignment.reportedTime }}</b></p>
+                            <br>
+                            
+                            <p>Toilet to clean : <b>{{ assignment.toiletAssigned }}</b></p>
+                            <br>
+                            
+                            <p>Purpose : <b>{{ assignment.purpose }}</b></p>
                             
                             <br>
-                            <p>Most problematic toilet : <b>L1 Male West</b></p>
                             
-                            <p class="red-text">May consider assigning more cleaners to toilet - L1 Male West.</p>
+                            <p>Status : <b>{{ assignment.status }}</b></p>
+                            
+                            <br>
+                            
+                            <button class="btn btn-success pull-right" type="button" id="cleaned" >Clean!</button>
+                            
                         </div>
                     </div>
                 </div>
             </div>
+                
             
         </div>
+        
+        <div class="col-md-4"></div>
         </div>
+            
         </div>
         
         <!-- Footer Bar -->
@@ -127,11 +111,12 @@ and open the template in the editor.
             </div>
         </div>
         
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/bootstrap.js"></script>
-        <script src="js/dashboard.js"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="js/cleaner.js"></script>
         
     </body>
 </html>

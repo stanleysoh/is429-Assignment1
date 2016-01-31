@@ -32,7 +32,7 @@ and open the template in the editor.
                 
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right" id="navbarList">
-                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
                         <li class="dropdown active">
                             
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage Site <b class="caret"></b></a>
@@ -59,7 +59,7 @@ and open the template in the editor.
             <div class="row">
                 
                 <div class="col-md-9 m-text">
-                    <h4>Cleaners assignment Log</h4>
+                    <h4>Cleaners Assignment Log</h4>
                     <br>
                     
                     <!--  Data Table -->
@@ -68,7 +68,7 @@ and open the template in the editor.
                         <tr class="warning m-text" ng-repeat="assignment in assignments | reverse">
                             <td>{{ assignment.cleaner }} <br> {{ assignment.contactNo }} <br><br> {{ assignment.toiletAssigned }}</td>
                             <td style="padding-left: 50px;"><br>{{ assignment.purpose }}</td>
-                            <td style="padding-left: 88px; text-align:right;">{{ assignment.reportedTime }}<br><br>In Progress</td>
+                            <td style="padding-left: 88px; text-align:right;">{{ assignment.reportedTime }}<br><br>{{ assignment.status }}</td>
                         </tr>
                         
                     </table>
@@ -184,7 +184,7 @@ and open the template in the editor.
         <div class="navbar navbar-default navbar-fixed-bottom footer">
             <div class="container">
                 <p class="navbar-text pull-left text-center">Site v0.1 designed and built by Team 6 (The toilet ICs)</p>
-                <a class="navbar-btn btn-warning btn pull-right">Check out Team 7!</a>
+                <a href="http://khiewshikai.github.io/moremall/" class="navbar-btn btn-warning btn pull-right">Check out Team 7!</a>
                 <a class="navbar-btn btn-warning btn pull-right btn-margin-right">Check out Team 5!</a>
             </div>
         </div>
@@ -209,6 +209,8 @@ and open the template in the editor.
                     <input type="text" name="name" class="form-control input-lg" id="assign-name" placeholder="Cleaner's Name">
                     <br>
                     <input type="text" name="contact" class="form-control input-lg" id="assign-contact" placeholder="Contact No">
+                    <br>
+                    <input type="text" name="email" class="form-control input-lg" id="assign-email" placeholder="Email">
                     <br>
                     <input type="text" name="toilet" class="form-control input-lg" id="assign-toilet" placeholder="Assign Toilet">
                     <br>

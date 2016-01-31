@@ -22,9 +22,15 @@ $(function () {
                 
               } else {
                   
+                  localStorage.setItem("loginUser",email);
+                  
+                  if (email !== "manager@toiletic.com") {
+                      window.location.href = "cleaner.html";
+                  } else {
+                  
                   window.location.href = "dashboard.html";
             
-                  localStorage.setItem("loginUser",email);
+                    }
                   
                   console.log("Authenticated successfully with payload:", authData);
               }
