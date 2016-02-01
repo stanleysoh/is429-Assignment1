@@ -12,6 +12,16 @@ $(function () {
     
     node.appendChild(status);                              
     document.getElementById("navbarList").appendChild(node); 
+	
+	var node2 = document.createElement("LI");                 
+    var status2 = document.createElement('a');
+    
+    status2.className = 'status';
+    status2.innerHTML = "Logout";
+    status2.href = "index.html";
+    
+    node2.appendChild(status2);                              
+    document.getElementById("navbarList").appendChild(node2);
     
     //var active = false;
     
