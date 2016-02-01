@@ -81,7 +81,7 @@ $(function() {
             text: 'Toilet Popularity'
         },
         xAxis: {
-            categories: ['L1 Male East', 'L1 Male West', 'L1 Female East', 'L1 Female East']
+            categories: ['L1 Male East', 'L1 Male West', 'L1 Female East', 'L1 Female West']
         },
         yAxis: {
             min: 0,
@@ -143,7 +143,7 @@ $(function() {
             text: 'Most Problematic Toilet'
         },
         xAxis: {
-            categories: ['L1 Male East', 'L1 Male West', 'L1 Female East', 'L1 Female East']
+            categories: ['L1 Male East', 'L1 Male West', 'L1 Female East', 'L1 Female West']
         },
         yAxis: {
             min: 0,
